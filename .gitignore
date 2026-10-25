@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Database (contains user data - do not commit)
+*.db
+instance/
+
+# User uploaded files (do not commit)
+uploads/
+images/
+
+# Environment variables (never commit secrets)
+.env
+
+# IDE / Editor
+.idea/
+.vscode/
+*.lnk
+
+# OS
+.DS_Store
+Thumbs.db

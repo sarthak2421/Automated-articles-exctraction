@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  Login
+{% endblock %}
+{% block content %}
+  <div class="container">
+    <div class="text-center my-5"> <!-- Center content vertically -->
+      <h1 style="font-weight: bold; font-size: 3rem; color: #007bff;" class="mb-4">Login</h1> <!-- Apply bold, custom color, and size -->
+    </div>
+    <form method="POST" class="form-login">
+      {{ form.hidden_tag() }}
+      <div class="mb-3">
+          <div style="display: flex; justify-content: center;">
+            <label for="login" class="form-label" style="text-align: center">
+              {{ form.username.label(class="form-label") }}
+            </label>
+          </div>
+          <div class="container" style="width: 470px;">
+              {{ form.username(class="form-control", placeholder="User Name") }}
+          </div>
+      </div>
+
+      <div class="mb-3">
+        <div style="display: flex; justify-content: center;">
+          <label for="password" class="form-label" style="text-align: center">Password:</label>
+        </div>
+        <div class="container" style="width: 470px;">
+          {{ form.password(class="form-control", placeholder="Password") }}
+
+        </div>
+      </div>
+      <br>
+      <div class="text-center">
+        {{ form.submit(class="btn btn-primary btn-lg") }} <!-- Remove btn-block class -->
+
+        <br>
+        <br>
+        <h5>Don`t have an Account? </h5>
+        <a class="btn btn-sm btn-secondary" href="{{ url_for('register') }}">Register Now</a>
+      </div>
+    </form> <!-- Close the form tag -->
+  </div> <!-- Close the container -->
+{% endblock %}

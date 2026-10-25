@@ -1,0 +1,32 @@
+--Commands to run in the terminal, To create database :
+python
+from main(.py file name) import app,db
+app.app_context().push() to push the app context manually
+db.create_all()
+
+--Adding Function Item from main.py
+from main import Item
+
+--Adding Items into database
+>>> item1 = Item(name='IPhone',barcode='589654712365',price=399,desc='Iphone X')
+>>> db.session.add(item1)
+>>> db.session.commit()
+
+--Checking Items
+>>> Item.query.all()
+
+--To drop database in correct order:
+from sqlalchemy import create_engine, MetaData
+
+# Create engine
+engine = create_engine('your_database_uri')
+
+# Create metadata
+metadata = MetaData()
+
+# Reflect existing tables
+metadata.reflect(bind=engine)
+
+# Drop tables in the correct order
+metadata.drop_all(bind=engine, checkfirst=True)
+

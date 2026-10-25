@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Crop page
+{% endblock %}
+{% block content %}
+    <style>
+        .body{
+            background-color: #b8cfcc
+        }
+    </style>
+    <h1 class="text-center">Upload Files To Crop </h1>
+    <br>
+    <br>
+    <form id="uploadForm" class="text-center" action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="file" multiple>
+        <button type="button" class="btn btn-success" id="submitBtn">Submit</button>
+    </form>
+
+{% endblock %}
+
+

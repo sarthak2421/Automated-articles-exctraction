@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block content %}
+    <section class="vh-100" style="background-color: #f8f9fa;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card shadow-lg rounded-3" style="background-color: #fff;">
+                        <div class="card-body p-5 text-center">
+
+                            <h1 class="display-4 mb-4" style="color: #007bff;">Welcome to the Automated Newspaper Cropping Tool!</h1>
+
+                            <p class="lead mb-4" style="color: #333;">Streamline your newspaper processing with our automated cropping tool.</p>
+
+                            <button class="btn btn-lg btn-primary" style="background-color: #007bff; border-color: #007bff;" onclick="window.location.href='{{ url_for('crop') }}'">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  Registration
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="text-center my-5"> <!-- Center content vertically -->
+      <h1 style="font-weight: bold; font-size: 3rem; color: #007bff;" class="mb-4">Registration</h1> <!-- Apply bold, custom color, and size -->
+    </div>
+    <form method="POST" class="form-register">
+      {{ form.hidden_tag() }}
+      <div class="mb-3">
+
+        {{ form.uname.label(class="form-label") }}
+        {{ form.uname(class="form-control", placeholder="User Name") }}
+      </div>
+
+      <div class="mb-3">
+        {{ form.email.label(class="form-label") }}
+        {{ form.email(class="form-control", placeholder="Email Address") }}
+      </div>
+
+      <div class="mb-3">
+        <label for="pass1" class="form-label">Password</label>
+        <div class="input-group">
+          {{ form.pass1(class="form-control", placeholder="Password", id="pass1") }}
+
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="pass2" class="form-label">Confirm Password</label>
+        <div class="input-group">
+          {{ form.pass2(class="form-control", placeholder="Confirm Password", id="pass2") }}
+        </div>
+      </div>
+      <br>
+      <div class="text-center">
+        {{ form.submit(class="btn btn-primary btn-lg") }} <!-- Remove btn-block class -->
+
+        <br>
+        <br>
+
+        <h5>Already Have an Account?</h5>
+        <a class="btn btn-sm btn-secondary" href="{{ url_for('login') }}">Login</a>
+      </div>
+
+
+    </form>
+  </div>
+
+{% endblock %}
