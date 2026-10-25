@@ -107,10 +107,6 @@ project2024/
 | `/` | GET | Landing page |
 | `/crop` | GET | Upload interface (login required) |
 | `/upload` | POST | Triggers PDF processing pipeline |
-<<<<<<< HEAD
-| `/market` | GET, POST | Buy/sell item marketplace |
-=======
->>>>>>> 0ea86681c8bec82a3e7db9ccd1766f42cee782fa
 | `/register` | GET, POST | User registration |
 | `/login` | GET, POST | User login |
 | `/logout` | GET | User logout |
